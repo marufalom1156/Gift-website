@@ -3,132 +3,196 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>I Need Some Gift</title>
+<title>Maruf Gift Shop</title>
 
 <style>
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: black;
-    color: white;
-    text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #fdfbfb, #ebedee);
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
-h1 {
-    color: gold;
-    margin-top: 20px;
+/* Header */
+header {
+  background: linear-gradient(45deg, #ff6f61, #ff9472);
+  color: white;
+  padding: 20px;
+  animation: fadeIn 1s ease-in;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
 }
 
 .subtitle {
-    color: #ccc;
-    margin-bottom: 20px;
+  margin-top: 5px;
+  font-size: 14px;
 }
 
+/* Buttons */
+.top-buttons {
+  margin: 15px;
+}
+
+.btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  margin: 5px;
+  transition: 0.3s;
+}
+
+.fb {
+  background: #1877f2;
+}
+
+.whatsapp {
+  background: #25d366;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+/* Container */
 .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
 }
 
+/* Card */
 .card {
-    background: #111;
-    border: 2px solid gold;
-    border-radius: 15px;
-    padding: 15px;
-    transition: 0.3s;
+  background: white;
+  padding: 15px;
+  width: 250px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  animation: fadeUp 1s ease;
 }
 
 .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px gold;
+  transform: translateY(-10px);
 }
 
-.card img {
-    width: 100%;
-    border-radius: 10px;
+img {
+  width: 100%;
+  border-radius: 10px;
 }
 
+/* Text */
 .price {
-    color: gold;
-    font-weight: bold;
-    margin: 10px 0;
+  color: green;
+  font-size: 18px;
+  margin: 5px 0;
 }
 
-button {
-    background: gold;
-    border: none;
-    padding: 10px;
-    margin: 5px;
-    border-radius: 5px;
-    cursor: pointer;
+/* Order Button */
+.order-btn {
+  background: green;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 
-button:hover {
-    background: orange;
+.order-btn:hover {
+  background: darkgreen;
 }
 
-.footer {
-    margin-top: 20px;
-    padding: 10px;
-    border-top: 1px solid gold;
+/* Animation */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 </style>
 
 </head>
 
 <body>
 
-<h1>💎 I Need Some Gift</h1>
-<p class="subtitle">Gypsum Art | Candle | Chocolate | Gift Box</p>
+<header>
+  <div class="logo">🎁 Maruf Gift Shop</div>
+  <div class="subtitle">Gypsum Art | Candle | Chocolate | Gift Box</div>
+</header>
+
+<div class="top-buttons">
+  <a href="https://www.facebook.com/share/1E97wAbrvm/" target="_blank">
+    <button class="btn fb">📘 Facebook Page</button>
+  </a>
+
+  <a href="https://wa.me/8801838613200" target="_blank">
+    <button class="btn whatsapp">💬 WhatsApp</button>
+  </a>
+</div>
 
 <div class="container">
 
-    <div class="card">
-        <img src="image1.jpg">
-        <h3>🎨 Gypsum Art</h3>
-        <p>Handmade premium decoration</p>
-        <p class="price">৳400</p>
-        <a href="https://wa.me/8801838613200">
-            <button>Order WhatsApp</button>
-        </a>
-    </div>
+  <!-- Product 1 -->
+  <div class="card">
+    <img src="product.jpeg">
+    <h3>🖼️ Gypsum Art</h3>
+    <p>Handmade premium decoration</p>
+    <p class="price"><b>৳400</b></p>
+    <a href="https://wa.me/8801838613200?text=I want to order Gypsum Art">
+      <button class="order-btn">Order Now</button>
+    </a>
+  </div>
 
-    <div class="card">
-        <img src="image2.jpg">
-        <h3>🕯 Gypsum Candle</h3>
-        <p>Luxury handmade candle</p>
-        <p class="price">৳350</p>
-        <a href="https://wa.me/8801838613200">
-            <button>Order WhatsApp</button>
-        </a>
-    </div>
+  <!-- Product 2 -->
+  <div class="card">
+    <img src="product (3).jpeg">
+    <h3>🕯️ Candle</h3>
+    <p>Beautiful handmade candle</p>
+    <p class="price"><b>৳250</b></p>
+    <a href="https://wa.me/8801838613200?text=I want to order Candle">
+      <button class="order-btn">Order Now</button>
+    </a>
+  </div>
 
-    <div class="card">
-        <img src="image3.jpg">
-        <h3>🍫 Chocolate Gift</h3>
-        <p>Delicious handmade chocolate</p>
-        <p class="price">৳200</p>
-        <a href="https://wa.me/8801838613200">
-            <button>Order WhatsApp</button>
-        </a>
-    </div>
+  <!-- Product 3 -->
+  <div class="card">
+    <img src="product (4).jpeg">
+    <h3>🍫 Chocolate Box</h3>
+    <p>Special gift chocolate pack</p>
+    <p class="price"><b>৳500</b></p>
+    <a href="https://wa.me/8801838613200?text=I want to order Chocolate Box">
+      <button class="order-btn">Order Now</button>
+    </a>
+  </div>
 
-    <div class="card">
-        <img src="image4.jpg">
-        <h3>🎁 Gift Box</h3>
-        <p>Custom gift packaging</p>
-        <p class="price">৳500</p>
-        <a href="https://wa.me/8801838613200">
-            <button>Order WhatsApp</button>
-        </a>
-    </div>
+  <!-- Product 4 -->
+  <div class="card">
+    <img src="product.jpeg">
+    <h3>🎁 Gift Box</h3>
+    <p>Custom handmade gift box</p>
+    <p class="price"><b>৳600</b></p>
+    <a href="https://wa.me/8801838613200?text=I want to order Gift Box">
+      <button class="order-btn">Order Now</button>
+    </a>
+  </div>
 
-</div>
-
-<div class="footer">
-    📞 WhatsApp: 01838613200 <br>
-    💰 bKash: 01706199330
 </div>
 
 </body>
