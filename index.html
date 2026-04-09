@@ -1,16 +1,78 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My Gift Shop</title>
+  <title>Maruf Gift Shop</title>
+  <style>
+    body {
+      font-family: Arial;
+      margin: 0;
+      background: #f8f8f8;
+    }
+    header {
+      background: #ff4d6d;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .container {
+      padding: 20px;
+    }
+    .product {
+      background: white;
+      padding: 15px;
+      margin: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ccc;
+      text-align: center;
+    }
+    button {
+      background: #25D366;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
 </head>
+
 <body>
 
-<h1>Welcome to My Gift Shop 🎁</h1>
-<p>Handmade gypsum, candles & gifts</p>
+<header>
+  <h1>🎁 Maruf Gift Shop</h1>
+  <p>Handmade Gift Box | Candle | Chocolate</p>
+</header>
 
-<h2>My Products</h2>
+<div class="container">
 
-<img src="compressed_logo.jpg" width="200">
+  <div class="product">
+    <h2>🎁 Gift Box</h2>
+    <p>Beautiful handmade gift box</p>
+    <p><b>Price: 500৳</b></p>
+    <button onclick="order()">Order Now</button>
+  </div>
+
+  <div class="product">
+    <h2>🕯 Candle</h2>
+    <p>Handcrafted scented candle</p>
+    <p><b>Price: 300৳</b></p>
+    <button onclick="order()">Order Now</button>
+  </div>
+
+  <div class="product">
+    <h2>🍫 Chocolate</h2>
+    <p>Delicious handmade chocolate</p>
+    <p><b>Price: 200৳</b></p>
+    <button onclick="order()">Order Now</button>
+  </div>
+
+</div>
+
+<script>
+function order() {
+  window.open("https://wa.me/8801838613200", "_blank");
+}
+</script>
 
 </body>
 </html>
